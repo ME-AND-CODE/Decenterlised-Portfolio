@@ -27,7 +27,7 @@ const Hero = ({state}) => {
         <section className="hero">
         <div className="container">
             <div className="hero-text">
-                <p><span>Muhammad Ans Awan </span>
+                <p><span>Muhammad Ans Awan</span>
                     is a  Blockchain Developer.</p>
                 <h1>I develop decentralised apps in web3 space.</h1>
                 <h3>{description}</h3>
