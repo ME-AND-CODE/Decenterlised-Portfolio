@@ -1,0 +1,51 @@
+:root {
+    --color-bg: #1a1a1a;
+    --color-blue: #3498db;
+    --icon-size: 60px;
+    --icon-size-mobile: 40px;
+    --icon-margin: 20px 0;
+    --icon-margin-mobile: 12px 0;
+    --gap-large: 150px;
+    --gap-small: 20px;
+    --border-color: var(--color-blue);
+    --transition-duration: 0.3s;
+}
+
+.socials {
+    background-color: var(--color-bg);
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: var(--gap-large);
+    border-top: 1px solid var(--border-color);
+    border-bottom: 1px solid var(--border-color);
+    padding: var(--icon-margin);
+    transition: gap var(--transition-duration), padding var(--transition-duration);
+}
+
+.socials .icon {
+    color: var(--color-blue);
+    height: var(--icon-size);
+    width: var(--icon-size);
+    margin: var(--icon-margin);
+    transition: height var(--transition-duration), width var(--transition-duration), margin var(--transition-duration);
+}
+
+.socials .icon:hover {
+    color: white; /* Optional hover effect */
+    transform: scale(1.1);
+}
+
+@media screen and (max-width: 420px) {
+    .socials {
+        gap: var(--gap-small);
+        padding: var(--icon-margin-mobile);
+    }
+
+    .socials .icon {
+        height: var(--icon-size-mobile);
+        width: var(--icon-size-mobile);
+        margin: var(--icon-margin-mobile);
+    }
+}

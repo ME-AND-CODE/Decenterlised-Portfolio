@@ -1,0 +1,133 @@
+.project-section {
+    color: white;
+    width: 100%;
+    min-height: 100vh;
+    background-color: var(--color-bg);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 20px; /* Added padding for better spacing */
+}
+
+.project-section .title {
+    font-size: 28px;
+    text-transform: uppercase;
+    padding-bottom: 4px;
+    border-bottom: 2px solid white;
+    width: fit-content;
+}
+
+/* =========card========== */
+.project-card {
+    height: 100%;
+    width: 300px;
+    background-color: var(--color-blue);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    transition: transform 400ms;
+    overflow: hidden; /* Added to handle overflow of content */
+    padding: 16px; /* Added padding for inner spacing */
+}
+.project-card:hover {
+    transform: scale(1.06);
+    color: white;
+}
+
+.project-card .card-img {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.project-card .card-img img {
+    margin-top: 14px;
+    border-radius: 8px;
+    width: 100%; /* Set to 100% for better responsiveness */
+    height: auto; /* Maintain aspect ratio */
+}
+
+.card-wrapper a {
+    text-decoration: none;
+    color: white;
+}
+
+.project-card .card-text h3 {
+    font-weight: 800;
+    text-align: center;
+    margin: 12px 14px 0px 14px;
+}
+
+.project-card .card-text p {
+    margin: 10px 14px 0px 14px;
+    font-weight: 300;
+    text-align: center;
+    opacity: 0.8;
+}
+
+.project-section .card-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap; /* Added to wrap cards on smaller screens */
+    gap: 70px;
+}
+
+.project-section .donate {
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 600;
+    padding: 8px 24px;
+    border-radius: 20px;
+    border: 1px solid var(--color-blue);
+    opacity: 0.9;
+}
+.donate:hover {
+    background-color: var(--color-blue);
+}
+
+.project-section .icon {
+    width: 18px;
+    height: 18px;
+    margin-left: 8px;
+}
+
+/* =========media queries========== */
+@media screen and (max-width: 768px) {
+    .project-section .card-wrapper {
+        gap: 40px;
+    }
+}
+
+@media screen and (max-width: 420px) {
+    .project-section {
+        padding-top: 60px;
+        height: auto; /* Changed to auto to adapt to content */
+        gap: 70px;
+    }
+    .project-section .title {
+        font-size: 24px;
+    }
+
+    /* =========card========== */
+    .project-section .card-wrapper {
+        flex-direction: column;
+        gap: 34px;
+        margin-bottom: 20px;
+    }
+
+    .project-section .donate {
+        font-size: 14px;
+        font-weight: 400;
+        margin-bottom: 60px;
+    }
+
+    .project-section .icon {
+        width: 16px;
+        height: 16px;
+    }
+}
